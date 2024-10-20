@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/default.css">
+    <link rel="stylesheet" href="Styles/index.css">
+    <link rel="stylesheet" href="default/transitions.css">
+    <link rel="stylesheet" href="Styles/headerInput.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script src="default/script.js" defer></script>
+    <title>Loja Lazuli</title>
+</head>
+<body>
+    <div class="transition transition-2 is-active"></div>
+    
+    <header>
+        <div class="headerUpInput opacity">
+            <button onclick="inputDisappear()">Fechar</button>
+            <input type="text" name="busca" id="busca" placeholder="Buscar produtos">
+        </div>
+        <div class="headerUp">
+            <div class="headerLeft">
+                <button onclick="index()">
+                    <a href="index.html"><img src="Imagens/LogoLazulli.png" alt=""></a>
+                </button>
+                <button onclick="inputAppear()" id="lupa"><img src="Imagens/lupa.png"></button>
+            </div>
+            <div class="headerRight">
+                <div class="left">
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                    <button id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="right">
+                    <button onclick="contato()"><a>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z"/><path d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z"/></svg>
+                        Contato
+                    </a>
+                    </button>
+                    <button onclick="carrinho()">
+                        <a>
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/></svg>
+                            Carrinho
+                        </a>
+                    </button>
+                    <button onclick="sobreNos()">
+                        <a>Sobre nós</a>
+                    </button>
+                    
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="leftBar">
+        <div class="titleMenu">
+            <label>Lazuli</label>
+            <button id="menuBtnRemover">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- <button id="menuBtnRemover"></button> -->
+        </div>
+        
+        <div class="upperMenu">
+            <button onclick="contato()"><a>
+                    Contato
+                </a>
+            </button>
+            <button onclick="carrinho()">
+                <a>
+                    Carrinho
+                </a>
+            </button>
+            <button onclick="sobreNos()">
+                <a>Sobre nós</a>
+            </button>
+        </div>
+        <div class="bottomMenu">
+            <a href="#">Alugar um lote</a>
+            <label>(xx) xxxxx-xxxx</label>
+            <label>xxxx@gmail.com</label> 
+        </div>
+    </div>
+
+
+    <div class="container1">
+        <div class="Left">
+            <div class="buttonLeft"><img src="Imagens/landingSetaBranca.png" alt=""></div>
+        </div>
+        
+        <img src="Imagens/Header1.png">
+        <div class="Right">
+            <div class="buttonRight"><img src="Imagens/landingSetaBranca.png" alt=""></div>
+        </div>
+        
+    </div>
+    <div class="headerDown">
+        <a href="#">Outlet</a>
+        <a href="#">Plus Size</a>
+        <a href="#">Acessórios</a>
+        <a href="#">Beleza</a>
+        <a href="#">Jeans</a>
+        <a href="#">Esportivo</a>
+        <a href="#">Novidades</a>
+        <a href="#">Categorias</a>
+    </div>
+    
+
+    <section id="sec3">
+        <div class="container">
+            <div class="icon">
+                <img src="Imagens ADM/18.jpg" alt="">
+            </div>
+            <h4>Croppeds</h4>
+        </div>
+        <div class="container">
+            <div class="icon">
+                <img src="Imagens ADM/28.jpg" alt="">
+            </div>
+            <h4>Conjuntos</h4>
+        </div>
+        <div class="container">
+            <div class="icon">
+                <img src="Imagens ADM/31.jpg" alt="">
+            </div>
+            <h4>Oversizeds</h4>
+        </div>
+    </section>
+    <section id="sec1">
+        <div class="sectionLeft">
+            <h3>Produtos</h3>
+
+            <div class="menus tamanho">
+                <h3>TAMANHO</h3>
+                <hr>
+                <button class="tamanhoBtn">
+                    <span>PP</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        35
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>P</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        62
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>M</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        95
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>G</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        87
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>GG</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        73
+                    </div>
+                </button>
+            </div>
+            <div class="menus cor">
+                <h3>COR</h3>
+                <hr>
+                <button class="tamanhoBtn">
+                    <span>BRANCO</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        35
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>BEGE</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        62
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>MARROM</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        95
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>LARANJA</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        87
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>ESCARLATE</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        95
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>VERMELHO</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        87
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>ROSA</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        95
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>VERDE CLARO</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        87
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>AZUL ESCURO</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        95
+                    </div>
+                </button>
+                <button class="tamanhoBtn">
+                    <span>PRETO</span>
+                    <div class="imgAndNumber">
+                        <div class="checkbox"></div>
+                        87
+                    </div>
+                </button>
+            </div>
+            <div class="menus preco">
+                <h3>PREÇO</h3>
+                <hr>
+                <button class="precoBtn">ENTRE R$0,00 E R$19,99</button>
+                <button class="precoBtn">ENTRE R$10,00 E R$39,99</button>
+                <button class="precoBtn">ENTRE R$20,00 E R$49,99</button>
+                <button class="precoBtn">ENTRE R$30,00 E R$59,99</button>
+                <button class="precoBtn">ENTRE R$40,00 E R$69,99</button>
+                <button class="precoBtn">ENTRE R$50,00 E R$79,99</button>
+                <div class="escolhaPreco">
+                    ENTRE: <input type="text">
+                    E <input type="text">
+                    <input type="submit" value="OK">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section2 col1">
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/2.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template1</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/7.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template2</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/30.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template3</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+            </div>
+            <div class="section2 col2">
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/2.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template1</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/7.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template2</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/30.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template3</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+            </div>
+            <div class="section2 col3">
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/2.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template1</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/7.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template2</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+                <button onclick="compra()" class="cardProd">
+                    <div class="img">
+                        <img src="Imagens ADM/30.jpg" alt="">
+                    </div>
+                    <div class="texto">
+                        <span>Template3</span>
+                        <span>Lazuli</span>
+                    </div>
+                    <div class="pricing">
+                        <span>R$49.99</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container2">
+        <div class="card">
+            <img src="Imagens ADM/19.jpg" alt="">
+                <a href="#">Calças</a>
+        </div>
+        <div class="card">
+            <img src="Imagens/Img7.png" alt="">
+                <a href="#">Camisas</a>
+        </div>
+        <div class="card">
+            <img src="Imagens/Img6.png" alt="">
+                <a href="#">Vestidos</a>
+        </div>
+        <div class="card">
+            <img src="Imagens ADM/27.jpg" alt="">
+                <a href="#">Casacos</a>
+        </div>
+    </div>
+    
+    <section id="sec2">
+        <div class="section1">
+            <div class="section1 container">
+                <img src="Imagens/freteGratis.png" alt="">
+                <span>Frete Grátis</span>
+            </div>
+            <div class="section1 container">
+                <img src="Imagens/pagamentoSeguro.png" alt="">
+                <span>Pagamento Seguro</span>
+            </div>
+            <div class="section1 container">
+                <img src="Imagens/entregaRapida.png" alt="">
+                <span>Entrega Rápida</span>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="newsletter">
+            <div class="img">
+                <img src="Imagens/Img9.jpg" alt="">
+            </div>
+            <form class="form" method="POST">
+                <span>Se inscreva na nossa Newsletter aqui, 
+                    fique por dentro de todas as atualizações!</span>
+                <div class="formInput">
+                    <input type="text" name="nomeNews" id="nomeNews" placeholder="Nome">
+                </div>
+                <div class="formInput">
+                    <input type="email" name="emailNews" id="emailNews" placeholder="E-mail">
+                </div>
+                <div class="formInput">
+                    <input type="submit" value="Receber atualizações">
+                </div>
+            </form>
+        </div>
+        <div class="container4">
+            <label>AJUDA E SUPORTE</label>
+            <label>INSTITUCIONAL</label>
+            <label>REDES SOCIAIS</label>
+        </div>
+        <div class="container5">
+            <div class="ajuda">
+                <a href="#">trocas e devoluções</a>
+                <a href="#">entregas e fretes</a>
+                <a href="#">contato (21) 9xxxx-xxxx</a>
+            </div>
+            <div class="institucional">
+                <a href="#">sobre a instituição</a>
+                <a href="#">políticas de privacidade</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScOJUP6l9bqcg6K0tc2WxG3hwULyVCIyE488dnVTeMTFD2hyQ/viewform?usp=sf_link">trabalhe conosco</a>
+                <a href="#">regulamentos e promoções</a>
+            </div>
+            <div class="redes">
+                <a href="#">Facebook<img src="Imagens/iconFace.png" alt=""></a>
+                <a href="https://instagram.com/lazzuli._?igshid=MzRlODBiNWFlZA==">Instagram<img src="Imagens/iconInsta.png" alt=""></a>
+                <a href="#">Twitter<img src="Imagens/iconTwitter.png" alt=""></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

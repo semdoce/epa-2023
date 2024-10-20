@@ -1,0 +1,54 @@
+body {
+    background-image: url("../Imagens/CadastroBG.png");
+}
+.input label,
+.inputBtn label {
+    color: #00000099;
+    font-size: 1rem;
+}
+.input label {
+    position: absolute;
+    bottom: 0;
+    padding: 0.2rem 0.2rem;
+}
+.input {
+    position: relative;
+}
+.input input {
+    border: none;
+    border-bottom: 1px solid #00000099;
+    width: 100%;
+    padding: 1rem 0;
+}
+.inputBtn label span {
+    color: rgb(43, 43, 252);
+    font-size: 1.3rem;
+    cursor: pointer
+}
+.container1 {
+    height: 5rem;
+}
+.container2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height:30rem;
+}
+form {
+    background-color: #ffffff;
+    padding: 4rem 3rem;
+    
+}
+.inputBtn {
+    display: flex;
+    flex-flow: column nowrap;
+}
+.inputBtn input[type=submit] {
+    background-color: #6E8FD3;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+}

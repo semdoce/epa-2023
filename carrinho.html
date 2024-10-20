@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/default.css">
+    <link rel="stylesheet" href="default/transitions.css">
+    <link rel="stylesheet" href="Styles/headerInput.css">
+    <link rel="stylesheet" href="Styles/carrinho.css">
+    <script src="default/script.js" defer></script>
+    <title>Loja Lazuli</title>
+</head>
+<body>
+    <div class="transition transition-2 is-active"></div>
+
+    <header>
+        <div class="headerUpInput opacity">
+            <button onclick="inputDisappear()">Fechar</button>
+            <input type="text" name="busca" id="busca" placeholder="Buscar produtos">
+        </div>
+        <div class="headerUp">
+            <div class="headerLeft">
+                <button onclick="index()">
+                    <a href="index.html"><img src="Imagens/LogoLazulli.png" alt=""></a>
+                </button>
+                <button onclick="inputAppear()" id="lupa"><img src="Imagens/lupa.png"></button>
+            </div>
+            <div class="headerRight">
+                <div class="left">
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                    <button id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="right">
+                    <button onclick="contato()"><a>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z"/><path d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z"/></svg>
+                        Contato
+                    </a>
+                    </button>
+                    <button onclick="carrinho()">
+                        <a>
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/></svg>
+                            Carrinho
+                        </a>
+                    </button>
+                    <button onclick="sobreNos()">
+                        <a>Sobre nós</a>
+                    </button>
+                    
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    
+
+    <div class="leftBar">
+        <div class="titleMenu">
+            <label>Lazuli</label>
+            <button id="menuBtnRemover">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- <button id="menuBtnRemover"></button> -->
+        </div>
+        
+        <div class="upperMenu">
+            <button onclick="contato()"><a>
+                    Contato
+                </a>
+            </button>
+            <button onclick="carrinho()">
+                <a>
+                    Carrinho
+                </a>
+            </button>
+            <button onclick="sobreNos()">
+                <a>Sobre nós</a>
+            </button>
+        </div>
+        <div class="bottomMenu">
+            <a href="#">Alugar um lote</a>
+            <label>(xx) xxxxx-xxxx</label>
+            <label>xxxx@gmail.com</label> 
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <h1>Cesto (1)</h1>
+        <div class="container1">
+            <div class="left">
+                <div class="container2">
+                    <div class="c2left">
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="item"></div>
+                        <div class="bottom">Ver tudo...</div>
+                    </div>
+                    <div class="c2right">
+                        <div class="card">
+                            <div class="promo"><label>20% OFF</label></div>
+                            <div class="info">
+                                <img src="Imagens ADM/11.jpg">
+                                <div class="price">R$ 159,99 <span>R$ 199,99</span></div>
+                                <div class="bottom">
+                                    <div class="qtd">
+                                        <button>-</button>
+                                                1
+                                        <button>+</button>
+                                    </div>
+                                    <div class="delete">Eliminar</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container3">
+                    <h1>Buscas semelhantes</h1>
+                    <div class="cardList">
+                        <div class="card">
+                            <img src="Imagens ADM/14.jpg">
+                            <div class="info">
+                                <h2>Template</h2>
+                                <div class="price">R$ 190,00</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="Imagens ADM/15.jpg">
+                            <div class="info">
+                                <h2>Template</h2>
+                                <div class="price">R$ 110,00</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="Imagens ADM/7.jpg">
+                            <div class="info">
+                                <h2>Template</h2>
+                                <div class="price">R$ 160,00</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="Imagens ADM/21.jpg">
+                            <div class="info">
+                                <h2>Template</h2>
+                                <div class="price">R$ 90,00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="up">
+                    <div class="pricing">
+                        <h2>Subtotal:</h2>
+                        <h2>320,00BRL</h2>
+                    </div>
+                    <div class="pricing">
+                        <h2>Desconto:</h2>
+                        <h2>70,00</h2>
+                    </div>
+                    <button>Inserir um cupom de desconto</button>
+                </div>
+                <div class="down">
+                    <button>Finalizar pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

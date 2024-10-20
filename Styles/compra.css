@@ -1,0 +1,164 @@
+.container1 {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 3rem;
+}
+
+
+.compraLeft {
+    width: 50%;
+    gap: 1rem;
+    display: flex;
+}
+.compraLeft button {
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+    border: 2px solid #00000000;
+}
+.compraLeft button img.selected {
+    border-radius: 16px;
+    border: 2px solid #b7c8eb;
+}
+.compraLeft button img:not(.selected)::before {
+    content: '';
+    background-color: black;
+    border-radius: 16px;
+    top: 0;
+    display: flex;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    opacity: .2;
+}
+.compraLeft button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.compraLeft img {
+    object-fit: cover;
+    border-radius: 16px;
+}
+.compraLeft #bigImage {
+    width: calc(100% - 6rem);
+    height: 80vh;
+    box-shadow: 0 0 16px #01052734;
+}
+.compraRight {
+    width: 50%;
+    padding: 1rem 4rem 1rem 1rem;
+}
+.compraRight h1 {
+    font-family: PlayfarDisplay_Regular;
+    font-size: 1.5rem;
+    padding-bottom: 4rem;
+}
+.compraRight .preco {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+} 
+.compraRight .cores {
+    height: 20vh;
+    display: flex;
+    gap: 1rem;
+    flex-flow: column nowrap;
+    margin-bottom: 2rem;
+}
+
+.images {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.images .imagens {
+    width: 6rem;
+    height: 4rem;
+    cursor: pointer;
+}
+.images .imagens img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.images .imagens span {
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+.comprar {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem
+}
+.comprar button {
+    padding: 1rem;
+    border-radius: 6px;
+    border: 2px solid #2C3E65;
+    transition: .5s;
+}
+.comprar button.carrinho {
+    background:#2C3E65;
+}
+.comprar button:hover {
+    background: #f1f1f1af;
+    color: black;
+}
+.tamanhos {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.tamanhos .textos {
+    display: flex;
+    gap: 1rem;
+}
+.tamanhos .texto.selected {
+    background-color:#2c3e65a4;
+    border: 2px solid #2C3E65;
+    text-shadow: 0 0 2px #000000;
+    color: #ffffff;
+}
+.tamanhos .texto {
+    background-color:#2C3E6563;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+    border: 2px solid #00000000;
+    color: #ffffff63;
+}
+
+.quantidade {
+    display: flex;
+    height: 6rem;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+.quantidade .number {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.quantidade .number button {
+    background-color: #2C3E65;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    transition: .5s;
+}
+.quantidade .number button:hover {
+    background: #f1f1f1af;
+    color: black;
+}
+.cores zxc {
+    color: #ffffffa1
+}

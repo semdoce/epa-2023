@@ -1,0 +1,248 @@
+header {
+    width: 100%;
+    height: 6rem;
+    background-color: #1D2E53;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.headerUp {
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+    width: 60%;
+    background-color: #1D2E53;
+    transition: 0.5s;
+}
+.headerUp .headerLeft {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.headerLeft input[type=text] {
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.headerUp .headerLeft input{
+    height: 2rem;
+    width: 100%;
+}
+.headerUp .headerLeft a,
+.headerUp .headerLeft img {
+    width: 50px;
+    height: 50px;
+}
+#lupa img {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter:invert();
+}
+.headerUp .headerRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header .headerRight .right{
+    display: flex;
+    height: 100%;
+    gap: 1.5rem;
+}
+header .headerRight .right a svg,
+header .headerRight .left a svg {
+    width: 1rem;
+    fill: #FCFCFC;
+}
+header .headerRight .right a,
+header .headerRight .left a {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+header .headerRight .right a.last,
+header .headerRight .left a.last {
+    gap: 0.3rem;
+    background-color: #ffffff13;
+    padding: 6px 12px;
+    border-radius: 1rem;
+}
+.headerDown {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c053c8a;
+}
+.headerDown a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    transition: .5s;
+    color: #7c90c4;
+}
+.headerDown a:hover {
+    color: #fcfcfc;
+    background-color: #1D2E53;
+}
+
+.leftBar {
+    height: 100%;
+    width: clamp( 300px, 35vw, 450px); /* Alterável dependente da qtd de items + tarde */
+    position: fixed;
+    right: -450px;
+    top: 0;
+
+    color: #FCFCFC;
+    background-color: #2C3E65;
+
+    display: flex;
+    flex-flow: column nowrap;
+    transition: all .5s ease;
+    z-index: 2;
+}
+.leftBar.active {
+    right: 0;
+}
+.titleMenu {
+    width: 100%;
+    height: 10%;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 10px 16px 0;
+}
+.leftBar .upperMenu, 
+.leftBar .bottomMenu {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 4rem 2rem 1rem;
+    
+}
+.leftBar .upperMenu a {
+    display: flex;
+    flex: row nowrap;
+    align-items: center;
+
+    gap: 16px;
+    border-radius: 4px;
+
+    padding: 16px;
+    transition: all .2s ease;
+}
+.leftBar .upperMenu a:hover {
+    background-color: #00000010;
+}
+.leftBar .upperMenu label {
+    cursor: pointer;
+}
+.leftBar .bottomMenu {
+    position: relative;
+    
+    border-top: 1px solid #00000010;
+    padding-top: 1rem;
+    color:#000000ac;
+}
+
+.left {
+    display: none;
+    gap: 1rem;
+}
+
+#menuBtn {
+    border: none;
+    background: #00000000;
+    cursor: pointer;
+}
+#menuBtn:hover {
+    border: none;
+    background: #00000000
+}
+#menuBtn span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+}
+#menuBtn span:first-child {
+    margin-top: 6px;
+}
+#menuBtnRemover {
+    border: none;
+    background: #00000000;
+    
+    width: 33px;
+    height: 33px;
+    position: relative;
+    cursor: pointer;
+}
+#menuBtnRemover:hover {
+    border: none;
+    background: #00000000
+}
+#menuBtnRemover span{
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 4px;
+    background: #FCFCFC;
+    border-radius: 3px;
+    z-index: 1;
+    top: 0;
+    margin-top: 15px;
+    transform: rotate(-45deg);
+}
+#menuBtnRemover span:first-child {
+    transform: rotate(45deg);
+}
+
+
+.headerUp.displayNone {
+    display: none
+}
+.headerUpInput.display {
+    display: flex;
+    position: absolute;
+}
+
+
+.headerUpInput {
+    display: none;
+    align-items: center;
+    height: 3rem;
+    width: 60%;
+    background-color: #1D2E53;
+    transition: 0.5s;
+}
+.headerUpInput input {
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #0000001c;
+    border: none;
+    outline: none;
+    
+}
+
+@media (width<1000px) {
+    .left {
+        display: flex;
+    }
+    header .headerRight .right {
+        display: none;
+    }
+}

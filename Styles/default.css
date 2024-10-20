@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Poppins_Regular;
+    src: url(../Fontes/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: HappyMonkey_Regular;
+    src: url(../Fontes/HappyMonkey-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins_Bold;
+    src: url(../Fontes/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins_SemiBold;
+    src: url(../Fontes/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: PlayfarDisplay_Regular;
+    src: url(../Fontes/PlayfairDisplay-Regular.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Poppins_Regular;
+    background: rgb(217,237,255);
+    background: linear-gradient(145deg, #2c3e65 0%, #ced9da 100%);
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-style: none;
+    font-size: 1rem;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: Poppins_SemiBold;
+}
+.headerLeft label {
+    font-family: HappyMonkey_Regular;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+}
+p span {
+    font-family: Poppins_SemiBold;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: Poppins_Regular;
+}
+input[type=submit] {
+    cursor: pointer;
+}
+.input label,
+.inputBtn label {
+    font-family: Poppins_Regular;
+}
+label {
+    cursor: pointer
+}
+.opacity {
+    opacity: 0;
+}
+::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    opacity: .8; /* Firefox */
+}
+  
+::-ms-input-placeholder { /* Edge 12 -18 */
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+}

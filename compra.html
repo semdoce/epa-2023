@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/default.css">
+    <link rel="stylesheet" href="Styles/compra.css">
+    <link rel="stylesheet" href="default/transitions.css">
+    <link rel="stylesheet" href="Styles/headerInput.css">
+    <link rel="stylesheet" href="Styles/footer.css">
+    <script src="default/script.js" defer></script>
+    <title>Loja Lazuli</title>
+</head>
+<body>
+    <div class="transition transition-2 is-active"></div>
+    <header>
+        <div class="headerUpInput opacity">
+            <button onclick="inputDisappear()">Fechar</button>
+            <input type="text" name="busca" id="busca" placeholder="Buscar produtos">
+        </div>
+        <div class="headerUp">
+            <div class="headerLeft">
+                <button onclick="index()">
+                    <a href="index.html"><img src="Imagens/LogoLazulli.png" alt=""></a>
+                </button>
+                <button onclick="inputAppear()" id="lupa"><img src="Imagens/lupa.png"></button>
+            </div>
+            <div class="headerRight">
+                <div class="left">
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                    <button id="menuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <div class="right">
+                    <button onclick="contato()"><a>
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20"><path d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z"/><path d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z"/></svg>
+                        Contato
+                    </a>
+                    </button>
+                    <button onclick="carrinho()">
+                        <a>
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 0h8m-8 0-1-4m9 4a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-9-4h10l2-7H3m2 7L3 4m0 0-.792-3H1"/></svg>
+                            Carrinho
+                        </a>
+                    </button>
+                    <button onclick="sobreNos()">
+                        <a>Sobre nós</a>
+                    </button>
+                    
+                    <button onclick="perfil()">
+                        <a class="last">
+                            <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"  xml:space="preserve"><g><path class="st0" d="M458.159,404.216c-18.93-33.65-49.934-71.764-100.409-93.431c-28.868,20.196-63.938,32.087-101.745,32.087 c-37.828,0-72.898-11.89-101.767-32.087c-50.474,21.667-81.479,59.782-100.398,93.431C28.731,448.848,48.417,512,91.842,512c43.426,0,164.164,0,164.164,0s120.726,0,164.153,0C463.583,512,483.269,448.848,458.159,404.216z"/><path class="st0" d="M256.005,300.641c74.144,0,134.231-60.108,134.231-134.242v-32.158C390.236,60.108,330.149,0,256.005,0c-74.155,0-134.252,60.108-134.252,134.242V166.4C121.753,240.533,181.851,300.641,256.005,300.641z"/></g></svg>
+                            <label>Entre aqui</label>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <div class="leftBar">
+        <div class="titleMenu">
+            <label>Lazuli</label>
+            <button id="menuBtnRemover">
+                <span></span>
+                <span></span>
+            </button>
+            <!-- <button id="menuBtnRemover"></button> -->
+        </div>
+        
+        <div class="upperMenu">
+            <button onclick="contato()"><a>
+                    Contato
+                </a>
+            </button>
+            <button onclick="carrinho()">
+                <a>
+                    Carrinho
+                </a>
+            </button>
+            <button onclick="sobreNos()">
+                <a>Sobre nós</a>
+            </button>
+        </div>
+        <div class="bottomMenu">
+            <a href="#">Alugar um lote</a>
+            <label>(xx) xxxxx-xxxx</label>
+            <label>xxxx@gmail.com</label> 
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="compraLeft">
+            <div class="imagens">
+                <button><img src="Imagens ADM/20.jpg" alt=""></button>
+                <button><img class="selected" src="Imagens ADM/21.jpg" alt=""></button>
+            </div>
+            <img id="bigImage" src="Imagens ADM/21.jpg" alt="">
+        </div>
+        <div class="compraRight">
+            <h1>Titulo Da Compra Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+            <div class="preco">
+                <span>R$59,99</span>
+                <span>91 vendidos</span>
+            </div>
+            <div class="cores">
+                <span>Cores: <zxc>Escura</zxc></span>
+                <div class="images">
+                    <div class="imagens">
+                        <img src="Imagens ADM/20.jpg" alt="">
+                        <span>Clara</span>
+                    </div>
+                    <div class="imagens">
+                        <img src="Imagens ADM/21.jpg" alt="">
+                        <span>Escura</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tamanhos">
+                <span>Tamanhos</span>
+                <div class="textos">
+                    <button class="texto selected">
+                        S
+                    </button>
+                    <button class="texto">
+                        M
+                    </button>
+                    <button class="texto">
+                        L
+                    </button>
+                    <button class="texto">
+                        XL
+                    </button>
+                </div>
+            </div>
+            
+            <div class="quantidade">
+                <span>Quantidade</span>
+                <div class="number">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="comprar">
+                <button class="carrinho">Adicionar ao carrinho</button>
+                <button>Comprar agora</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="newsletter">
+            <div class="img">
+                <img src="Imagens/Img9.jpg" alt="">
+            </div>
+            <form class="form" method="POST">
+                <span>Se inscreva na nossa Newsletter aqui, 
+                    fique por dentro de todas as atualizações!</span>
+                <div class="formInput">
+                    <input type="text" name="nomeNews" id="nomeNews" placeholder="Nome">
+                </div>
+                <div class="formInput">
+                    <input type="email" name="emailNews" id="emailNews" placeholder="E-mail">
+                </div>
+                <div class="formInput">
+                    <input type="submit" value="Receber atualizações">
+                </div>
+            </form>
+        </div>
+        <div class="container4">
+            <label>AJUDA E SUPORTE</label>
+            <label>INSTITUCIONAL</label>
+            <label>REDES SOCIAIS</label>
+        </div>
+        <div class="container5">
+            <div class="ajuda">
+                <a href="#">trocas e devoluções</a>
+                <a href="#">entregas e fretes</a>
+                <a href="#">contato (21) 9xxxx-xxxx</a>
+            </div>
+            <div class="institucional">
+                <a href="#">sobre a instituição</a>
+                <a href="#">políticas de privacidade</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScOJUP6l9bqcg6K0tc2WxG3hwULyVCIyE488dnVTeMTFD2hyQ/viewform?usp=sf_link">trabalhe conosco</a>
+                <a href="#">regulamentos e promoções</a>
+            </div>
+            <div class="redes">
+                <a href="#">Facebook<img src="Imagens/iconFace.png" alt=""></a>
+                <a href="https://instagram.com/lazzuli._?igshid=MzRlODBiNWFlZA==">Instagram<img src="Imagens/iconInsta.png" alt=""></a>
+                <a href="#">Twitter<img src="Imagens/iconTwitter.png" alt=""></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
